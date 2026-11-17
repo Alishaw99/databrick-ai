@@ -1,0 +1,42 @@
+bundle:
+  name: payments_lakehouse
+
+include:
+  - resources/*.yml
+
+workspace:
+  host: https://dbc-cbef9784-5349.cloud.databricks.com
+  profile: Faisal
+
+variables:
+  catalog:
+    default: rafa
+  base_schema:
+    default: payments_raw
+  warehouse_id:
+    default: d781c076806d9c09
+  alert_email:
+    default: tariq.faisal1999@outlook.com
+  bronze_schema:
+    default: payments_bronze
+  silver_schema:
+    default: payments_silver
+  gold_schema:
+    default: payments_gold
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/dev
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/prod
+    variables:
+      base_schema: payments_raw_prod
+      bronze_schema: payments_bronze_prod
+      silver_schema: payments_silver_prod
+      gold_schema: payments_gold_prod
+

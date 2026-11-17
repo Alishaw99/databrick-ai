@@ -1,0 +1,1096 @@
+{
+  "profiled_at_utc": "2026-11-17T00:21:36.373389+00:00",
+  "sources": {
+    "products": {
+      "rows": 200,
+      "columns": {
+        "product_idx": {
+          "type": "bigint",
+          "nulls": 0,
+          "distinct": 200,
+          "min": 0,
+          "max": 199,
+          "mean": 99.5,
+          "quantiles": [
+            99,
+            189,
+            197
+          ]
+        },
+        "product_id": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 200,
+          "blanks": 0
+        },
+        "category": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 2,
+          "blanks": 0
+        },
+        "unit_price": {
+          "type": "double",
+          "nulls": 0,
+          "distinct": 200,
+          "min": 15.08,
+          "max": 257.29,
+          "mean": 72.61679999999998,
+          "quantiles": [
+            50.21,
+            233.48,
+            255.45
+          ]
+        },
+        "ingestion_date": {
+          "type": "date",
+          "nulls": 0,
+          "distinct": 1,
+          "min": "2026-09-01",
+          "max": "2026-09-01"
+        }
+      },
+      "storage": {
+        "files": 1,
+        "bytes": 4444,
+        "smallest_file_bytes": 4444,
+        "largest_file_bytes": 4444
+      },
+      "exact_duplicate_rows": 0,
+      "duplicate_key_excess": 0,
+      "distributions": {
+        "category": [
+          {
+            "category": "consumer",
+            "count": 150
+          },
+          {
+            "category": "business",
+            "count": 50
+          }
+        ]
+      },
+      "daily_volumes": [
+        {
+          "ingestion_date": "2026-09-01",
+          "count": 200
+        }
+      ]
+    },
+    "customers": {
+      "rows": 10405,
+      "columns": {
+        "event_id": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 10405,
+          "blanks": 0
+        },
+        "customer_id": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 10000,
+          "blanks": 0
+        },
+        "name": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 5989,
+          "blanks": 0
+        },
+        "region": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 4,
+          "blanks": 0
+        },
+        "tier": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 3,
+          "blanks": 0
+        },
+        "operation": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 3,
+          "blanks": 0
+        },
+        "effective_ts": {
+          "type": "timestamp",
+          "nulls": 0,
+          "distinct": 7,
+          "min": "2026-09-01 00:00:00",
+          "max": "2026-10-18 00:00:00"
+        },
+        "sequence": {
+          "type": "int",
+          "nulls": 0,
+          "distinct": 2,
+          "min": 1,
+          "max": 2,
+          "mean": 1.0389235944257569,
+          "quantiles": [
+            1,
+            1,
+            2
+          ]
+        },
+        "ingestion_date": {
+          "type": "date",
+          "nulls": 0,
+          "distinct": 7,
+          "min": "2026-09-01",
+          "max": "2026-10-18"
+        }
+      },
+      "storage": {
+        "files": 7,
+        "bytes": 186948,
+        "smallest_file_bytes": 2393,
+        "largest_file_bytes": 164065
+      },
+      "exact_duplicate_rows": 0,
+      "duplicate_key_excess": 0,
+      "distributions": {
+        "operation": [
+          {
+            "operation": "I",
+            "count": 10000
+          },
+          {
+            "operation": "U",
+            "count": 305
+          },
+          {
+            "operation": "D",
+            "count": 100
+          }
+        ],
+        "tier": [
+          {
+            "tier": "standard",
+            "count": 6600
+          },
+          {
+            "tier": "pro",
+            "count": 3305
+          },
+          {
+            "tier": "enterprise",
+            "count": 500
+          }
+        ],
+        "region": [
+          {
+            "region": "North America",
+            "count": 4720
+          },
+          {
+            "region": "Europe",
+            "count": 2875
+          },
+          {
+            "region": "Asia Pacific",
+            "count": 1984
+          },
+          {
+            "region": "Latin America",
+            "count": 826
+          }
+        ]
+      },
+      "daily_volumes": [
+        {
+          "ingestion_date": "2026-09-01",
+          "count": 10000
+        },
+        {
+          "ingestion_date": "2026-09-20",
+          "count": 300
+        },
+        {
+          "ingestion_date": "2026-10-01",
+          "count": 100
+        },
+        {
+          "ingestion_date": "2026-10-11",
+          "count": 1
+        },
+        {
+          "ingestion_date": "2026-10-14",
+          "count": 2
+        },
+        {
+          "ingestion_date": "2026-10-16",
+          "count": 1
+        },
+        {
+          "ingestion_date": "2026-10-18",
+          "count": 1
+        }
+      ]
+    },
+    "orders": {
+      "rows": 165493,
+      "columns": {
+        "order_id": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 109980,
+          "blanks": 0
+        },
+        "line_key": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 164722,
+          "blanks": 0
+        },
+        "line_number": {
+          "type": "int",
+          "nulls": 0,
+          "distinct": 2,
+          "min": 1,
+          "max": 2,
+          "mean": 1.332400766195549,
+          "quantiles": [
+            1,
+            2,
+            2
+          ]
+        },
+        "customer_id": {
+          "type": "string",
+          "nulls": 478,
+          "distinct": 9799,
+          "blanks": 0
+        },
+        "product_id": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 200,
+          "blanks": 0
+        },
+        "order_ts": {
+          "type": "timestamp",
+          "nulls": 0,
+          "distinct": 108517,
+          "min": "2026-09-01 00:01:02",
+          "max": "2099-01-01 00:00:00"
+        },
+        "channel": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 3,
+          "blanks": 0
+        },
+        "quantity": {
+          "type": "int",
+          "nulls": 0,
+          "distinct": 2,
+          "min": 1,
+          "max": 2,
+          "mean": 1.201223012453699,
+          "quantiles": [
+            1,
+            2,
+            2
+          ]
+        },
+        "unit_price": {
+          "type": "double",
+          "nulls": 0,
+          "distinct": 200,
+          "min": 15.08,
+          "max": 257.29,
+          "mean": 66.17421667381636,
+          "quantiles": [
+            47.57,
+            218.01,
+            255.45
+          ]
+        },
+        "line_amount": {
+          "type": "double",
+          "nulls": 0,
+          "distinct": 395,
+          "min": -1.0,
+          "max": 514.58,
+          "mean": 79.33185427782375,
+          "quantiles": [
+            52.87,
+            245.39,
+            436.02
+          ]
+        },
+        "ingestion_date": {
+          "type": "date",
+          "nulls": 0,
+          "distinct": 61,
+          "min": "2026-09-01",
+          "max": "2026-10-31"
+        }
+      },
+      "storage": {
+        "files": 61,
+        "bytes": 4337815,
+        "smallest_file_bytes": 55025,
+        "largest_file_bytes": 80581
+      },
+      "exact_duplicate_rows": 771,
+      "duplicate_key_excess": 771,
+      "distributions": {
+        "channel": [
+          {
+            "channel": "web",
+            "count": 96019
+          },
+          {
+            "channel": "mobile",
+            "count": 52883
+          },
+          {
+            "channel": "partner",
+            "count": 16591
+          }
+        ]
+      },
+      "daily_volumes": [
+        {
+          "ingestion_date": "2026-09-01",
+          "count": 2786
+        },
+        {
+          "ingestion_date": "2026-09-02",
+          "count": 2715
+        },
+        {
+          "ingestion_date": "2026-09-03",
+          "count": 2741
+        },
+        {
+          "ingestion_date": "2026-09-04",
+          "count": 2871
+        },
+        {
+          "ingestion_date": "2026-09-05",
+          "count": 2188
+        },
+        {
+          "ingestion_date": "2026-09-06",
+          "count": 2027
+        },
+        {
+          "ingestion_date": "2026-09-07",
+          "count": 2763
+        },
+        {
+          "ingestion_date": "2026-09-08",
+          "count": 2796
+        },
+        {
+          "ingestion_date": "2026-09-09",
+          "count": 2723
+        },
+        {
+          "ingestion_date": "2026-09-10",
+          "count": 2828
+        },
+        {
+          "ingestion_date": "2026-09-11",
+          "count": 2808
+        },
+        {
+          "ingestion_date": "2026-09-12",
+          "count": 2117
+        },
+        {
+          "ingestion_date": "2026-09-13",
+          "count": 2167
+        },
+        {
+          "ingestion_date": "2026-09-14",
+          "count": 2821
+        },
+        {
+          "ingestion_date": "2026-09-15",
+          "count": 2872
+        },
+        {
+          "ingestion_date": "2026-09-16",
+          "count": 2872
+        },
+        {
+          "ingestion_date": "2026-09-17",
+          "count": 2847
+        },
+        {
+          "ingestion_date": "2026-09-18",
+          "count": 2862
+        },
+        {
+          "ingestion_date": "2026-09-19",
+          "count": 2182
+        },
+        {
+          "ingestion_date": "2026-09-20",
+          "count": 2137
+        },
+        {
+          "ingestion_date": "2026-09-21",
+          "count": 2857
+        },
+        {
+          "ingestion_date": "2026-09-22",
+          "count": 2835
+        },
+        {
+          "ingestion_date": "2026-09-23",
+          "count": 2814
+        },
+        {
+          "ingestion_date": "2026-09-24",
+          "count": 2819
+        },
+        {
+          "ingestion_date": "2026-09-25",
+          "count": 2863
+        },
+        {
+          "ingestion_date": "2026-09-26",
+          "count": 2141
+        },
+        {
+          "ingestion_date": "2026-09-27",
+          "count": 2217
+        },
+        {
+          "ingestion_date": "2026-09-28",
+          "count": 2935
+        },
+        {
+          "ingestion_date": "2026-09-29",
+          "count": 2897
+        },
+        {
+          "ingestion_date": "2026-09-30",
+          "count": 2959
+        },
+        {
+          "ingestion_date": "2026-10-01",
+          "count": 2979
+        },
+        {
+          "ingestion_date": "2026-10-02",
+          "count": 2914
+        },
+        {
+          "ingestion_date": "2026-10-03",
+          "count": 2233
+        },
+        {
+          "ingestion_date": "2026-10-04",
+          "count": 2210
+        },
+        {
+          "ingestion_date": "2026-10-05",
+          "count": 2955
+        },
+        {
+          "ingestion_date": "2026-10-06",
+          "count": 2934
+        },
+        {
+          "ingestion_date": "2026-10-07",
+          "count": 2959
+        },
+        {
+          "ingestion_date": "2026-10-08",
+          "count": 2953
+        },
+        {
+          "ingestion_date": "2026-10-09",
+          "count": 2881
+        },
+        {
+          "ingestion_date": "2026-10-10",
+          "count": 2340
+        },
+        {
+          "ingestion_date": "2026-10-11",
+          "count": 2239
+        },
+        {
+          "ingestion_date": "2026-10-12",
+          "count": 3022
+        },
+        {
+          "ingestion_date": "2026-10-13",
+          "count": 3007
+        },
+        {
+          "ingestion_date": "2026-10-14",
+          "count": 2938
+        },
+        {
+          "ingestion_date": "2026-10-15",
+          "count": 2978
+        },
+        {
+          "ingestion_date": "2026-10-16",
+          "count": 3014
+        },
+        {
+          "ingestion_date": "2026-10-17",
+          "count": 2247
+        },
+        {
+          "ingestion_date": "2026-10-18",
+          "count": 2201
+        },
+        {
+          "ingestion_date": "2026-10-19",
+          "count": 2881
+        },
+        {
+          "ingestion_date": "2026-10-20",
+          "count": 2939
+        },
+        {
+          "ingestion_date": "2026-10-21",
+          "count": 3038
+        },
+        {
+          "ingestion_date": "2026-10-22",
+          "count": 3036
+        },
+        {
+          "ingestion_date": "2026-10-23",
+          "count": 2950
+        },
+        {
+          "ingestion_date": "2026-10-24",
+          "count": 2356
+        },
+        {
+          "ingestion_date": "2026-10-25",
+          "count": 2125
+        },
+        {
+          "ingestion_date": "2026-10-26",
+          "count": 3031
+        },
+        {
+          "ingestion_date": "2026-10-27",
+          "count": 3095
+        },
+        {
+          "ingestion_date": "2026-10-28",
+          "count": 2991
+        },
+        {
+          "ingestion_date": "2026-10-29",
+          "count": 3110
+        },
+        {
+          "ingestion_date": "2026-10-30",
+          "count": 3073
+        },
+        {
+          "ingestion_date": "2026-10-31",
+          "count": 2404
+        }
+      ]
+    },
+    "payments": {
+      "rows": 114565,
+      "columns": {
+        "payment_event_id": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 114565,
+          "blanks": 0
+        },
+        "order_id": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 109980,
+          "blanks": 0
+        },
+        "gateway": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 3,
+          "blanks": 0
+        },
+        "attempt_number": {
+          "type": "int",
+          "nulls": 0,
+          "distinct": 2,
+          "min": 1,
+          "max": 2,
+          "mean": 1.0167241304063195,
+          "quantiles": [
+            1,
+            1,
+            2
+          ]
+        },
+        "event_type": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 2,
+          "blanks": 0
+        },
+        "status": {
+          "type": "string",
+          "nulls": 0,
+          "distinct": 4,
+          "blanks": 0
+        },
+        "event_ts": {
+          "type": "timestamp",
+          "nulls": 0,
+          "distinct": 113021,
+          "min": "2026-09-01 00:01:02",
+          "max": "2026-11-01 00:08:31"
+        },
+        "amount": {
+          "type": "double",
+          "nulls": 0,
+          "distinct": 13749,
+          "min": 15.08,
+          "max": 1029.16,
+          "mean": 119.01996814035665,
+          "quantiles": [
+            81.58,
+            394.84,
+            602.38
+          ]
+        },
+        "latency_ms": {
+          "type": "bigint",
+          "nulls": 0,
+          "distinct": 992,
+          "min": 0,
+          "max": 19957,
+          "mean": 484.88935538777116,
+          "quantiles": [
+            443,
+            767,
+            795
+          ]
+        },
+        "ingestion_date": {
+          "type": "date",
+          "nulls": 0,
+          "distinct": 61,
+          "min": "2026-09-01",
+          "max": "2026-10-31"
+        }
+      },
+      "storage": {
+        "files": 61,
+        "bytes": 3027521,
+        "smallest_file_bytes": 38782,
+        "largest_file_bytes": 55154
+      },
+      "exact_duplicate_rows": 0,
+      "duplicate_key_excess": 0,
+      "distributions": {
+        "gateway": [
+          {
+            "gateway": "GatewayA",
+            "count": 79967
+          },
+          {
+            "gateway": "GatewayB",
+            "count": 23185
+          },
+          {
+            "gateway": "GatewayC",
+            "count": 11413
+          }
+        ],
+        "event_type": [
+          {
+            "event_type": "attempt",
+            "count": 111857
+          },
+          {
+            "event_type": "refund",
+            "count": 2708
+          }
+        ],
+        "status": [
+          {
+            "status": "succeeded",
+            "count": 109165
+          },
+          {
+            "status": "refunded",
+            "count": 2706
+          },
+          {
+            "status": "failed",
+            "count": 2584
+          },
+          {
+            "status": "UNKNOWN",
+            "count": 110
+          }
+        ],
+        "attempt_number": [
+          {
+            "attempt_number": 1,
+            "count": 112649
+          },
+          {
+            "attempt_number": 2,
+            "count": 1916
+          }
+        ]
+      },
+      "daily_volumes": [
+        {
+          "ingestion_date": "2026-09-01",
+          "count": 1943
+        },
+        {
+          "ingestion_date": "2026-09-02",
+          "count": 1870
+        },
+        {
+          "ingestion_date": "2026-09-03",
+          "count": 1938
+        },
+        {
+          "ingestion_date": "2026-09-04",
+          "count": 1977
+        },
+        {
+          "ingestion_date": "2026-09-05",
+          "count": 1489
+        },
+        {
+          "ingestion_date": "2026-09-06",
+          "count": 1405
+        },
+        {
+          "ingestion_date": "2026-09-07",
+          "count": 1908
+        },
+        {
+          "ingestion_date": "2026-09-08",
+          "count": 1949
+        },
+        {
+          "ingestion_date": "2026-09-09",
+          "count": 1887
+        },
+        {
+          "ingestion_date": "2026-09-10",
+          "count": 1951
+        },
+        {
+          "ingestion_date": "2026-09-11",
+          "count": 1964
+        },
+        {
+          "ingestion_date": "2026-09-12",
+          "count": 1457
+        },
+        {
+          "ingestion_date": "2026-09-13",
+          "count": 1456
+        },
+        {
+          "ingestion_date": "2026-09-14",
+          "count": 1954
+        },
+        {
+          "ingestion_date": "2026-09-15",
+          "count": 1982
+        },
+        {
+          "ingestion_date": "2026-09-16",
+          "count": 1993
+        },
+        {
+          "ingestion_date": "2026-09-17",
+          "count": 1963
+        },
+        {
+          "ingestion_date": "2026-09-18",
+          "count": 1961
+        },
+        {
+          "ingestion_date": "2026-09-19",
+          "count": 1504
+        },
+        {
+          "ingestion_date": "2026-09-20",
+          "count": 1471
+        },
+        {
+          "ingestion_date": "2026-09-21",
+          "count": 1976
+        },
+        {
+          "ingestion_date": "2026-09-22",
+          "count": 1930
+        },
+        {
+          "ingestion_date": "2026-09-23",
+          "count": 1943
+        },
+        {
+          "ingestion_date": "2026-09-24",
+          "count": 1955
+        },
+        {
+          "ingestion_date": "2026-09-25",
+          "count": 1982
+        },
+        {
+          "ingestion_date": "2026-09-26",
+          "count": 1500
+        },
+        {
+          "ingestion_date": "2026-09-27",
+          "count": 1510
+        },
+        {
+          "ingestion_date": "2026-09-28",
+          "count": 2015
+        },
+        {
+          "ingestion_date": "2026-09-29",
+          "count": 1993
+        },
+        {
+          "ingestion_date": "2026-09-30",
+          "count": 2034
+        },
+        {
+          "ingestion_date": "2026-10-01",
+          "count": 2081
+        },
+        {
+          "ingestion_date": "2026-10-02",
+          "count": 2014
+        },
+        {
+          "ingestion_date": "2026-10-03",
+          "count": 1527
+        },
+        {
+          "ingestion_date": "2026-10-04",
+          "count": 1543
+        },
+        {
+          "ingestion_date": "2026-10-05",
+          "count": 2041
+        },
+        {
+          "ingestion_date": "2026-10-06",
+          "count": 2021
+        },
+        {
+          "ingestion_date": "2026-10-07",
+          "count": 2026
+        },
+        {
+          "ingestion_date": "2026-10-08",
+          "count": 2070
+        },
+        {
+          "ingestion_date": "2026-10-09",
+          "count": 2003
+        },
+        {
+          "ingestion_date": "2026-10-10",
+          "count": 1741
+        },
+        {
+          "ingestion_date": "2026-10-11",
+          "count": 1557
+        },
+        {
+          "ingestion_date": "2026-10-12",
+          "count": 2064
+        },
+        {
+          "ingestion_date": "2026-10-13",
+          "count": 2072
+        },
+        {
+          "ingestion_date": "2026-10-14",
+          "count": 2053
+        },
+        {
+          "ingestion_date": "2026-10-15",
+          "count": 2064
+        },
+        {
+          "ingestion_date": "2026-10-16",
+          "count": 2071
+        },
+        {
+          "ingestion_date": "2026-10-17",
+          "count": 1569
+        },
+        {
+          "ingestion_date": "2026-10-18",
+          "count": 1547
+        },
+        {
+          "ingestion_date": "2026-10-19",
+          "count": 2014
+        },
+        {
+          "ingestion_date": "2026-10-20",
+          "count": 2034
+        },
+        {
+          "ingestion_date": "2026-10-21",
+          "count": 2105
+        },
+        {
+          "ingestion_date": "2026-10-22",
+          "count": 2112
+        },
+        {
+          "ingestion_date": "2026-10-23",
+          "count": 2060
+        },
+        {
+          "ingestion_date": "2026-10-24",
+          "count": 1633
+        },
+        {
+          "ingestion_date": "2026-10-25",
+          "count": 1478
+        },
+        {
+          "ingestion_date": "2026-10-26",
+          "count": 2082
+        },
+        {
+          "ingestion_date": "2026-10-27",
+          "count": 2123
+        },
+        {
+          "ingestion_date": "2026-10-28",
+          "count": 2083
+        },
+        {
+          "ingestion_date": "2026-10-29",
+          "count": 2127
+        },
+        {
+          "ingestion_date": "2026-10-30",
+          "count": 2129
+        },
+        {
+          "ingestion_date": "2026-10-31",
+          "count": 1661
+        }
+      ]
+    }
+  },
+  "paths": {
+    "products": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/products/batch=historical-v1",
+    "customers": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1",
+    "orders": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1",
+    "payments": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1"
+  },
+  "quality": {
+    "missing_customer_lines": 478,
+    "nonpositive_lines": 344,
+    "future_lines": 151,
+    "duplicate_lines": 771,
+    "unknown_payment_statuses": 110
+  },
+  "gateway_periods": [
+    {
+      "gateway": "GatewayA",
+      "period": "baseline",
+      "attempts": 49296,
+      "failure_rate": 0.021725900681596882,
+      "mean_latency_ms": 449.89260791950664,
+      "retries": 810
+    },
+    {
+      "gateway": "GatewayA",
+      "period": "outage",
+      "attempts": 439,
+      "failure_rate": 0.6013667425968109,
+      "mean_latency_ms": 12331.168564920274,
+      "retries": 146
+    },
+    {
+      "gateway": "GatewayA",
+      "period": "recovery",
+      "attempts": 28267,
+      "failure_rate": 0.020943149255315385,
+      "mean_latency_ms": 450.53518236813244,
+      "retries": 429
+    },
+    {
+      "gateway": "GatewayB",
+      "period": "baseline",
+      "attempts": 14284,
+      "failure_rate": 0.019952394287314476,
+      "mean_latency_ms": 448.2611313357603,
+      "retries": 223
+    },
+    {
+      "gateway": "GatewayB",
+      "period": "outage",
+      "attempts": 74,
+      "failure_rate": 0.0,
+      "mean_latency_ms": 466.2972972972973,
+      "retries": 0
+    },
+    {
+      "gateway": "GatewayB",
+      "period": "recovery",
+      "attempts": 8243,
+      "failure_rate": 0.018561203445347566,
+      "mean_latency_ms": 449.3317966759675,
+      "retries": 107
+    },
+    {
+      "gateway": "GatewayC",
+      "period": "baseline",
+      "attempts": 7222,
+      "failure_rate": 0.02104680144004431,
+      "mean_latency_ms": 449.41359734145664,
+      "retries": 114
+    },
+    {
+      "gateway": "GatewayC",
+      "period": "outage",
+      "attempts": 41,
+      "failure_rate": 0.024390243902439025,
+      "mean_latency_ms": 435.1951219512195,
+      "retries": 1
+    },
+    {
+      "gateway": "GatewayC",
+      "period": "recovery",
+      "attempts": 3883,
+      "failure_rate": 0.0169971671388102,
+      "mean_latency_ms": 455.47849600824105,
+      "retries": 47
+    }
+  ],
+  "checks": {
+    "all_source_counts_match_step1": true,
+    "all_injected_defect_counts_match": true,
+    "baseline_near_2_percent": true,
+    "outage_near_60_percent": true,
+    "recovery_near_2_percent": true
+  }
+}

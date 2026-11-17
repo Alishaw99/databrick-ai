@@ -1,0 +1,144 @@
+{
+  "batch": "historical-v1",
+  "paths": {
+    "products": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/products/batch=historical-v1",
+    "customers": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1",
+    "orders": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1",
+    "payments": "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1"
+  },
+  "counts": {
+    "products": 200,
+    "customers": 10405,
+    "orders": 165493,
+    "payments": 114565
+  },
+  "file_counts": {
+    "products": 1,
+    "customers": 7,
+    "orders": 61,
+    "payments": 61
+  },
+  "ingestion_dates": {
+    "products": {
+      "first": "2026-09-01",
+      "last": "2026-09-01"
+    },
+    "customers": {
+      "first": "2026-09-01",
+      "last": "2026-10-18"
+    },
+    "orders": {
+      "first": "2026-09-01",
+      "last": "2026-10-31"
+    },
+    "payments": {
+      "first": "2026-09-01",
+      "last": "2026-10-31"
+    }
+  },
+  "quality": {
+    "missing_customer_lines": 478,
+    "nonpositive_lines": 344,
+    "future_lines": 151,
+    "duplicate_lines": 771,
+    "unknown_payment_statuses": 110
+  },
+  "distinct_orders": 109980,
+  "initial_enterprise_customer_share": 0.05,
+  "pre_outage_enterprise_value_share": 0.5017915588875526,
+  "gateway_health": [
+    {
+      "gateway": "GatewayA",
+      "period": "baseline",
+      "attempts": 49296,
+      "failure_rate": 0.021725900681596882,
+      "mean_latency_ms": 449.89260791950664,
+      "retries": 810
+    },
+    {
+      "gateway": "GatewayA",
+      "period": "outage",
+      "attempts": 439,
+      "failure_rate": 0.6013667425968109,
+      "mean_latency_ms": 12331.168564920274,
+      "retries": 146
+    },
+    {
+      "gateway": "GatewayA",
+      "period": "recovery",
+      "attempts": 28267,
+      "failure_rate": 0.020943149255315385,
+      "mean_latency_ms": 450.53518236813244,
+      "retries": 429
+    },
+    {
+      "gateway": "GatewayB",
+      "period": "baseline",
+      "attempts": 14284,
+      "failure_rate": 0.019952394287314476,
+      "mean_latency_ms": 448.2611313357603,
+      "retries": 223
+    },
+    {
+      "gateway": "GatewayB",
+      "period": "outage",
+      "attempts": 74,
+      "failure_rate": 0.0,
+      "mean_latency_ms": 466.2972972972973,
+      "retries": 0
+    },
+    {
+      "gateway": "GatewayB",
+      "period": "recovery",
+      "attempts": 8243,
+      "failure_rate": 0.018561203445347566,
+      "mean_latency_ms": 449.3317966759675,
+      "retries": 107
+    },
+    {
+      "gateway": "GatewayC",
+      "period": "baseline",
+      "attempts": 7222,
+      "failure_rate": 0.02104680144004431,
+      "mean_latency_ms": 449.41359734145664,
+      "retries": 114
+    },
+    {
+      "gateway": "GatewayC",
+      "period": "outage",
+      "attempts": 41,
+      "failure_rate": 0.024390243902439025,
+      "mean_latency_ms": 435.1951219512195,
+      "retries": 1
+    },
+    {
+      "gateway": "GatewayC",
+      "period": "recovery",
+      "attempts": 3883,
+      "failure_rate": 0.0169971671388102,
+      "mean_latency_ms": 455.47849600824105,
+      "retries": 47
+    }
+  ],
+  "gateway_order_counts": {
+    "GatewayC": 10992,
+    "GatewayB": 22295,
+    "GatewayA": 76693
+  },
+  "financial_excluded_unknown_status_orders": 110,
+  "valid_record_financials_usd": {
+    "captured_value": 12926549.860001344,
+    "refunded_value": 317869.37999999995,
+    "terminal_failed_value": 80434.04999999999,
+    "net_revenue": 12608680.480001343
+  },
+  "incident_terminal_failed_value_usd": 11349.189999999999,
+  "orders_recovered_by_retry": 1759,
+  "affected_enterprise_customers": 18,
+  "affected_enterprise_downgrades": 5,
+  "integrity": {
+    "unknown_product_lines": 0,
+    "unexpected_customer_lines": 0,
+    "orphan_payment_events": 0
+  }
+}

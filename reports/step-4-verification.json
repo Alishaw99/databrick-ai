@@ -1,0 +1,73 @@
+{
+  "job_id": 158198177201822,
+  "run_id": 217226658742723,
+  "run_url": "https://dbc-cbef9784-5349.cloud.databricks.com/?o=7474652258155511#job/158198177201822/run/217226658742723",
+  "pipeline_update_id": "cc017f98-06e4-451e-ba8f-cdb80ae4d93c",
+  "checks": {
+    "batch_complete": true,
+    "products_old_files_unchanged": true,
+    "products_only_new_batch_files": true,
+    "products_row_delta_matches_new_batch": true,
+    "customers_old_files_unchanged": true,
+    "customers_only_new_batch_files": true,
+    "customers_row_delta_matches_new_batch": true,
+    "orders_old_files_unchanged": true,
+    "orders_only_new_batch_files": true,
+    "orders_row_delta_matches_new_batch": true,
+    "payments_old_files_unchanged": true,
+    "payments_only_new_batch_files": true,
+    "payments_row_delta_matches_new_batch": true,
+    "new_day_reaches_gold": true,
+    "historical_gold_count_unchanged": true,
+    "gold_keys_unique": true,
+    "new_day_has_historical_tier": true,
+    "failure_email_configured": true,
+    "manual_only": true,
+    "job_incremental": true,
+    "job_success": true,
+    "new_files_ingested_during_job": true,
+    "pipeline_update_completed": true,
+    "pipeline_update_not_full_refresh": true
+  },
+  "bronze_deltas": {
+    "products": {
+      "before_rows": 200,
+      "after_rows": 200,
+      "new_rows": 0,
+      "new_file_count": 0,
+      "new_files": []
+    },
+    "customers": {
+      "before_rows": 10405,
+      "after_rows": 10415,
+      "new_rows": 10,
+      "new_file_count": 1,
+      "new_files": [
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=day-2026-11-01-v1/ingestion_date=2026-11-01/part-00000-tid-2327256716531525609-38d1c54a-d3d2-40ed-9d2c-18520d5a1eb3-2139-1.c000.snappy.parquet"
+      ]
+    },
+    "orders": {
+      "before_rows": 165493,
+      "after_rows": 167731,
+      "new_rows": 2238,
+      "new_file_count": 1,
+      "new_files": [
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=day-2026-11-01-v1/ingestion_date=2026-11-01/part-00000-tid-2983301062125944976-d28059d5-9896-46a4-a067-5b30a07d8259-2180-1.c000.snappy.parquet"
+      ]
+    },
+    "payments": {
+      "before_rows": 114565,
+      "after_rows": 116128,
+      "new_rows": 1563,
+      "new_file_count": 1,
+      "new_files": [
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=day-2026-11-01-v1/ingestion_date=2026-11-01/part-00000-tid-8922718638327569163-2de6dd53-04cc-4e3c-94cc-d1d8c27b37ac-2280-1.c000.snappy.parquet"
+      ]
+    }
+  },
+  "before_gold_orders": 109651,
+  "after_gold_orders": 111149,
+  "new_day_gold_orders": 1498,
+  "new_day_revenue_usd": "168380.48",
+  "failure_email_note": "Configuration verified; no failure induced and no test email sent."
+}

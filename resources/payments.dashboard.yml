@@ -1,0 +1,8 @@
+resources:
+  dashboards:
+    payment_dashboard:
+      display_name: Payments outage — revenue and customer impact
+      file_path: ../src/dashboards/payments.lvdash.json
+      warehouse_id: ${var.warehouse_id}
+      dataset_catalog: ${var.catalog}
+      dataset_schema: ${resources.schemas.gold.name}

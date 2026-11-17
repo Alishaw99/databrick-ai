@@ -1,0 +1,676 @@
+{
+  "bronze": {
+    "products": {
+      "rows": 200,
+      "files": {
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/products/batch=historical-v1/ingestion_date=2026-09-01/part-00001-tid-6226856589058072621-d6464a65-504d-417f-90b1-a95904319bce-137-1.c000.snappy.parquet": {
+          "rows": 200,
+          "first_ingested": "2026-11-17 00:29:31.424",
+          "last_ingested": "2026-11-17 00:29:31.424"
+        }
+      }
+    },
+    "customers": {
+      "rows": 10405,
+      "files": {
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1/ingestion_date=2026-10-11/part-00001-tid-235922786435540016-2fefed63-f833-4c7a-9cd5-fc1432a0a12d-316-3.c000.snappy.parquet": {
+          "rows": 1,
+          "first_ingested": "2026-11-17 00:29:31.691",
+          "last_ingested": "2026-11-17 00:29:31.691"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1/ingestion_date=2026-10-14/part-00001-tid-235922786435540016-2fefed63-f833-4c7a-9cd5-fc1432a0a12d-316-4.c000.snappy.parquet": {
+          "rows": 2,
+          "first_ingested": "2026-11-17 00:29:31.691",
+          "last_ingested": "2026-11-17 00:29:31.691"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1/ingestion_date=2026-10-18/part-00000-tid-235922786435540016-2fefed63-f833-4c7a-9cd5-fc1432a0a12d-315-3.c000.snappy.parquet": {
+          "rows": 1,
+          "first_ingested": "2026-11-17 00:29:31.691",
+          "last_ingested": "2026-11-17 00:29:31.691"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1/ingestion_date=2026-10-16/part-00000-tid-235922786435540016-2fefed63-f833-4c7a-9cd5-fc1432a0a12d-315-2.c000.snappy.parquet": {
+          "rows": 1,
+          "first_ingested": "2026-11-17 00:29:31.691",
+          "last_ingested": "2026-11-17 00:29:31.691"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1/ingestion_date=2026-09-01/part-00001-tid-235922786435540016-2fefed63-f833-4c7a-9cd5-fc1432a0a12d-316-1.c000.snappy.parquet": {
+          "rows": 10000,
+          "first_ingested": "2026-11-17 00:29:31.691",
+          "last_ingested": "2026-11-17 00:29:31.691"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1/ingestion_date=2026-09-20/part-00001-tid-235922786435540016-2fefed63-f833-4c7a-9cd5-fc1432a0a12d-316-2.c000.snappy.parquet": {
+          "rows": 300,
+          "first_ingested": "2026-11-17 00:29:31.691",
+          "last_ingested": "2026-11-17 00:29:31.691"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/customers/batch=historical-v1/ingestion_date=2026-10-01/part-00000-tid-235922786435540016-2fefed63-f833-4c7a-9cd5-fc1432a0a12d-315-1.c000.snappy.parquet": {
+          "rows": 100,
+          "first_ingested": "2026-11-17 00:29:31.691",
+          "last_ingested": "2026-11-17 00:29:31.691"
+        }
+      }
+    },
+    "orders": {
+      "rows": 165493,
+      "files": {
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-02/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-2.c000.snappy.parquet": {
+          "rows": 2715,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-03/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-1.c000.snappy.parquet": {
+          "rows": 2741,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-31/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-33.c000.snappy.parquet": {
+          "rows": 2404,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-24/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-27.c000.snappy.parquet": {
+          "rows": 2356,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-10/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-22.c000.snappy.parquet": {
+          "rows": 2340,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-11/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-23.c000.snappy.parquet": {
+          "rows": 2239,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-17/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-21.c000.snappy.parquet": {
+          "rows": 2247,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-03/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-15.c000.snappy.parquet": {
+          "rows": 2233,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-04/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-16.c000.snappy.parquet": {
+          "rows": 2210,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-27/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-11.c000.snappy.parquet": {
+          "rows": 2217,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-19/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-8.c000.snappy.parquet": {
+          "rows": 2182,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-05/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-3.c000.snappy.parquet": {
+          "rows": 2188,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-18/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-22.c000.snappy.parquet": {
+          "rows": 2201,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-26/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-16.c000.snappy.parquet": {
+          "rows": 2141,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-25/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-28.c000.snappy.parquet": {
+          "rows": 2125,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-20/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-12.c000.snappy.parquet": {
+          "rows": 2137,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-13/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-10.c000.snappy.parquet": {
+          "rows": 2167,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-12/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-9.c000.snappy.parquet": {
+          "rows": 2117,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-06/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-4.c000.snappy.parquet": {
+          "rows": 2027,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-28/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-17.c000.snappy.parquet": {
+          "rows": 2935,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-29/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-18.c000.snappy.parquet": {
+          "rows": 2897,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-09/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-18.c000.snappy.parquet": {
+          "rows": 2881,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-19/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-23.c000.snappy.parquet": {
+          "rows": 2881,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-16/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-5.c000.snappy.parquet": {
+          "rows": 2872,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-15/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-4.c000.snappy.parquet": {
+          "rows": 2872,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-21/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-13.c000.snappy.parquet": {
+          "rows": 2857,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-04/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-2.c000.snappy.parquet": {
+          "rows": 2871,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-25/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-15.c000.snappy.parquet": {
+          "rows": 2863,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-17/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-6.c000.snappy.parquet": {
+          "rows": 2847,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-18/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-7.c000.snappy.parquet": {
+          "rows": 2862,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-24/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-10.c000.snappy.parquet": {
+          "rows": 2819,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-22/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-14.c000.snappy.parquet": {
+          "rows": 2835,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-11/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-8.c000.snappy.parquet": {
+          "rows": 2808,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-14/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-11.c000.snappy.parquet": {
+          "rows": 2821,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-10/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-7.c000.snappy.parquet": {
+          "rows": 2828,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-23/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-9.c000.snappy.parquet": {
+          "rows": 2814,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-08/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-6.c000.snappy.parquet": {
+          "rows": 2796,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-01/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-1.c000.snappy.parquet": {
+          "rows": 2786,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-07/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-5.c000.snappy.parquet": {
+          "rows": 2763,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-09/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-3.c000.snappy.parquet": {
+          "rows": 2723,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-29/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-32.c000.snappy.parquet": {
+          "rows": 3110,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-27/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-30.c000.snappy.parquet": {
+          "rows": 3095,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-30/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-28.c000.snappy.parquet": {
+          "rows": 3073,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-22/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-25.c000.snappy.parquet": {
+          "rows": 3036,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-26/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-29.c000.snappy.parquet": {
+          "rows": 3031,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-16/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-20.c000.snappy.parquet": {
+          "rows": 3014,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-21/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-24.c000.snappy.parquet": {
+          "rows": 3038,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-12/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-19.c000.snappy.parquet": {
+          "rows": 3022,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-01/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-13.c000.snappy.parquet": {
+          "rows": 2979,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-15/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-26.c000.snappy.parquet": {
+          "rows": 2978,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-13/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-24.c000.snappy.parquet": {
+          "rows": 3007,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-28/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-31.c000.snappy.parquet": {
+          "rows": 2991,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-09-30/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-12.c000.snappy.parquet": {
+          "rows": 2959,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-14/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-25.c000.snappy.parquet": {
+          "rows": 2938,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-05/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-17.c000.snappy.parquet": {
+          "rows": 2955,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-20/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-27.c000.snappy.parquet": {
+          "rows": 2939,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-07/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-20.c000.snappy.parquet": {
+          "rows": 2959,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-06/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-19.c000.snappy.parquet": {
+          "rows": 2934,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-23/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-26.c000.snappy.parquet": {
+          "rows": 2950,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-08/part-00001-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-350-21.c000.snappy.parquet": {
+          "rows": 2953,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/orders/batch=historical-v1/ingestion_date=2026-10-02/part-00000-tid-422159070555847007-5979d203-010c-4736-b58f-fd99a7a24c26-349-14.c000.snappy.parquet": {
+          "rows": 2914,
+          "first_ingested": "2026-11-17 00:29:31.385",
+          "last_ingested": "2026-11-17 00:29:31.385"
+        }
+      }
+    },
+    "payments": {
+      "rows": 114565,
+      "files": {
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-04/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-1.c000.snappy.parquet": {
+          "rows": 1977,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-17/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-6.c000.snappy.parquet": {
+          "rows": 1963,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-14/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-11.c000.snappy.parquet": {
+          "rows": 1954,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-24/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-10.c000.snappy.parquet": {
+          "rows": 1955,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-10/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-7.c000.snappy.parquet": {
+          "rows": 1951,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-11/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-8.c000.snappy.parquet": {
+          "rows": 1964,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-23/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-9.c000.snappy.parquet": {
+          "rows": 1943,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-01/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-1.c000.snappy.parquet": {
+          "rows": 1943,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-22/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-14.c000.snappy.parquet": {
+          "rows": 1930,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-08/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-6.c000.snappy.parquet": {
+          "rows": 1949,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-07/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-5.c000.snappy.parquet": {
+          "rows": 1908,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-09/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-3.c000.snappy.parquet": {
+          "rows": 1887,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-10/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-22.c000.snappy.parquet": {
+          "rows": 1741,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-02/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-2.c000.snappy.parquet": {
+          "rows": 1870,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-31/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-33.c000.snappy.parquet": {
+          "rows": 1661,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-24/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-27.c000.snappy.parquet": {
+          "rows": 1633,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-17/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-21.c000.snappy.parquet": {
+          "rows": 1569,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-18/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-22.c000.snappy.parquet": {
+          "rows": 1547,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-11/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-23.c000.snappy.parquet": {
+          "rows": 1557,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-03/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-15.c000.snappy.parquet": {
+          "rows": 1527,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-04/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-16.c000.snappy.parquet": {
+          "rows": 1543,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-27/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-11.c000.snappy.parquet": {
+          "rows": 1510,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-19/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-8.c000.snappy.parquet": {
+          "rows": 1504,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-05/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-3.c000.snappy.parquet": {
+          "rows": 1489,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-26/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-16.c000.snappy.parquet": {
+          "rows": 1500,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-25/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-28.c000.snappy.parquet": {
+          "rows": 1478,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-13/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-10.c000.snappy.parquet": {
+          "rows": 1456,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-20/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-12.c000.snappy.parquet": {
+          "rows": 1471,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-12/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-9.c000.snappy.parquet": {
+          "rows": 1457,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-06/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-4.c000.snappy.parquet": {
+          "rows": 1405,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-30/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-28.c000.snappy.parquet": {
+          "rows": 2129,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-27/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-30.c000.snappy.parquet": {
+          "rows": 2123,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-29/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-32.c000.snappy.parquet": {
+          "rows": 2127,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-13/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-24.c000.snappy.parquet": {
+          "rows": 2072,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-28/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-31.c000.snappy.parquet": {
+          "rows": 2083,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-08/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-21.c000.snappy.parquet": {
+          "rows": 2070,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-21/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-24.c000.snappy.parquet": {
+          "rows": 2105,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-22/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-25.c000.snappy.parquet": {
+          "rows": 2112,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-23/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-26.c000.snappy.parquet": {
+          "rows": 2060,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-26/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-29.c000.snappy.parquet": {
+          "rows": 2082,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-12/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-19.c000.snappy.parquet": {
+          "rows": 2064,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-01/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-13.c000.snappy.parquet": {
+          "rows": 2081,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-15/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-26.c000.snappy.parquet": {
+          "rows": 2064,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-14/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-25.c000.snappy.parquet": {
+          "rows": 2053,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-28/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-17.c000.snappy.parquet": {
+          "rows": 2015,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-05/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-17.c000.snappy.parquet": {
+          "rows": 2041,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-20/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-27.c000.snappy.parquet": {
+          "rows": 2034,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-16/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-20.c000.snappy.parquet": {
+          "rows": 2071,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-07/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-20.c000.snappy.parquet": {
+          "rows": 2026,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-30/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-12.c000.snappy.parquet": {
+          "rows": 2034,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-06/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-19.c000.snappy.parquet": {
+          "rows": 2021,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-02/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-14.c000.snappy.parquet": {
+          "rows": 2014,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-19/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-23.c000.snappy.parquet": {
+          "rows": 2014,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-10-09/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-18.c000.snappy.parquet": {
+          "rows": 2003,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-18/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-7.c000.snappy.parquet": {
+          "rows": 1961,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-25/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-15.c000.snappy.parquet": {
+          "rows": 1982,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-15/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-4.c000.snappy.parquet": {
+          "rows": 1982,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-29/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-18.c000.snappy.parquet": {
+          "rows": 1993,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-16/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-5.c000.snappy.parquet": {
+          "rows": 1993,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-21/part-00001-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-419-13.c000.snappy.parquet": {
+          "rows": 1976,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        },
+        "/Volumes/rafa/dev_tariq_faisal1999_payments_raw/raw_data/sources/payments/batch=historical-v1/ingestion_date=2026-09-03/part-00000-tid-9083955787456736025-0214f6f7-19b1-428c-a9ce-b6c960f6a5d2-418-2.c000.snappy.parquet": {
+          "rows": 1938,
+          "first_ingested": "2026-11-17 00:29:32.644",
+          "last_ingested": "2026-11-17 00:29:32.644"
+        }
+      }
+    }
+  },
+  "gold_orders": 109651,
+  "gold_max_order_date": "2026-10-31"
+}

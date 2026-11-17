@@ -1,0 +1,43 @@
+{
+  "pipeline_id": "b6118dc8-faaa-4c10-89e5-0d58e6b7a068",
+  "counts": {
+    "bronze.products": 200,
+    "bronze.customers": 10405,
+    "bronze.orders": 165493,
+    "bronze.payments": 114565,
+    "silver.products": 200,
+    "silver.customer_events": 10405,
+    "silver.customer_history": 10305,
+    "silver.orders": 163749,
+    "silver.payments": 114455,
+    "gold.order_fact": 109651,
+    "gold.daily_sales": 6219,
+    "gold.hourly_gateway_health": 4375,
+    "gold.customer_outage_impact": 287,
+    "gold.recovery_trend": 4375
+  },
+  "checks": {
+    "bronze_matches_raw": true,
+    "bronze_provenance": true,
+    "silver_line_count": true,
+    "silver_payment_count": true,
+    "order_loss_below_1_percent": true,
+    "silver_keys_unique": true,
+    "fact_one_row_per_order": true,
+    "fact_historical_tier_resolved": true,
+    "customer_current_count": true,
+    "customer_history_no_overlap": true,
+    "settlement_revenue_reconciles": true,
+    "unknown_outcomes_not_lost_revenue": true,
+    "outage_visible_in_gold": true,
+    "enterprise_impact_matches_raw_story": true
+  },
+  "distinct_bronze_orders": 109980,
+  "distinct_silver_orders": 109651,
+  "order_loss_rate": 0.002991452991452981,
+  "net_revenue_usd": "12656691.82",
+  "gateway_a_outage_failure_rate": 0.6013667425968109,
+  "affected_enterprise_customers": 18,
+  "downgraded_enterprise_customers": 5,
+  "revenue_definition": "Captured payment amount less successful refunds; omit unknown outcome orders. Partial invalid lines do not reduce the independently recorded settlement amount."
+}

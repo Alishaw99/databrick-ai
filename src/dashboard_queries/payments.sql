@@ -1,0 +1,3 @@
+SELECT `Date` AS `date`, `Hour` AS `hour`, `Region` AS `region`, `Channel` AS `channel`, `Gateway` AS `gateway`, `Tier` AS `tier`, `Customer ID` AS `customer_id`, `Customer Name` AS `customer_name`, `Affected Customer ID` AS `affected_customer_id`, `Downgraded` AS `downgraded`, MEASURE(`Revenue`) AS metric_revenue, MEASURE(`Lost Revenue`) AS metric_lost_revenue, MEASURE(`Orders`) AS metric_orders, MEASURE(`Failed Orders`) AS metric_failed_orders, MEASURE(`Payment Attempts`) AS metric_attempts, MEASURE(`Failed Attempts`) AS metric_failed_attempts
+FROM payments_metrics
+GROUP BY ALL ORDER BY hour, gateway

@@ -1,0 +1,1 @@
+SELECT `Region`, MEASURE(Orders) AS orders FROM rafa.dev_tariq_faisal1999_payments_gold.payments_metrics WHERE `Date`=DATE '2026-10-10' AND `Gateway`='GatewayA' GROUP BY ALL

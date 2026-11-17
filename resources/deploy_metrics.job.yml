@@ -1,0 +1,20 @@
+resources:
+  jobs:
+    deploy_metrics:
+      name: deploy_payment_metrics
+      max_concurrent_runs: 1
+      performance_target: STANDARD
+      email_notifications:
+        on_failure:
+          - ${var.alert_email}
+      tags:
+        project: payments_lakehouse
+      parameters:
+        - name: metric_view
+          default: ${var.catalog}.${resources.schemas.gold.name}.payments_metrics
+      tasks:
+        - task_key: create_metric_view
+          sql_task:
+            warehouse_id: ${var.warehouse_id}
+            file:
+              path: ../src/metrics/${bundle.target}.sql

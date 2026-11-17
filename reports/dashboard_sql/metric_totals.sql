@@ -1,0 +1,1 @@
+SELECT MEASURE(Revenue) AS revenue, MEASURE(`Lost Revenue`) AS lost_revenue, MEASURE(Orders) AS orders, MEASURE(`Failed Orders`) AS failed_orders, MEASURE(`Payment Failure Rate`) AS failure_rate, MEASURE(`Affected Enterprise Customers`) AS affected FROM rafa.dev_tariq_faisal1999_payments_gold.payments_metrics

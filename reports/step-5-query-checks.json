@@ -1,0 +1,128 @@
+[
+  {
+    "name": "dataset_payments",
+    "state": "SUCCEEDED",
+    "rows": 5,
+    "error": null
+  },
+  {
+    "name": "dataset_enterprise",
+    "state": "SUCCEEDED",
+    "rows": 5,
+    "error": null
+  },
+  {
+    "name": "filter_date_payments_date",
+    "state": "SUCCEEDED",
+    "rows": 62,
+    "error": null
+  },
+  {
+    "name": "filter_date_enterprise_date",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "filter_region_payments_region",
+    "state": "SUCCEEDED",
+    "rows": 4,
+    "error": null
+  },
+  {
+    "name": "filter_region_enterprise_region",
+    "state": "SUCCEEDED",
+    "rows": 3,
+    "error": null
+  },
+  {
+    "name": "filter_gateway_payments_gateway",
+    "state": "SUCCEEDED",
+    "rows": 4,
+    "error": null
+  },
+  {
+    "name": "filter_gateway_enterprise_gateway",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "kpi_0_main_query",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "kpi_1_main_query",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "kpi_2_main_query",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "kpi_3_main_query",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "kpi_4_main_query",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "kpi_5_main_query",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "incident_main_query",
+    "state": "SUCCEEDED",
+    "rows": 4551,
+    "error": null
+  },
+  {
+    "name": "lost_region_main_query",
+    "state": "SUCCEEDED",
+    "rows": 4,
+    "error": null
+  },
+  {
+    "name": "lost_tier_main_query",
+    "state": "SUCCEEDED",
+    "rows": 3,
+    "error": null
+  },
+  {
+    "name": "recovery_main_query",
+    "state": "SUCCEEDED",
+    "rows": 242,
+    "error": null
+  },
+  {
+    "name": "top_customers_main_query",
+    "state": "SUCCEEDED",
+    "rows": 18,
+    "error": null
+  },
+  {
+    "name": "metric_totals",
+    "state": "SUCCEEDED",
+    "rows": 1,
+    "error": null
+  },
+  {
+    "name": "filter_semantics",
+    "state": "SUCCEEDED",
+    "rows": 4,
+    "error": null
+  }
+]

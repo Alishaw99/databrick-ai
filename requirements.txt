@@ -1,0 +1,4 @@
+databricks-connect==17.3.16
+Faker==40.54.0
+numpy==2.5.5
+pandas==2.3.3

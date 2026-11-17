@@ -1,0 +1,169 @@
+﻿[
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_gold.recovery_trend",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  0,
+                        "warned_records":  0
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_silver.orders_retention_check",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  0,
+                        "warned_records":  0,
+                        "expectations":  [
+                                             {
+                                                 "name":  "acceptable_order_loss",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.orders_retention_check",
+                                                 "passed_records":  1,
+                                                 "failed_records":  0
+                                             }
+                                         ]
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_gold.customer_outage_impact",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  0,
+                        "warned_records":  0
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_gold.daily_sales",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  0,
+                        "warned_records":  0
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_gold.hourly_gateway_health",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  0,
+                        "warned_records":  0
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_gold.order_fact",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  0,
+                        "warned_records":  0
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_silver.orders",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  973,
+                        "warned_records":  0,
+                        "expectations":  [
+                                             {
+                                                 "name":  "known_product",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.orders",
+                                                 "passed_records":  164722,
+                                                 "failed_records":  0
+                                             },
+                                             {
+                                                 "name":  "required_keys",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.orders",
+                                                 "passed_records":  164722,
+                                                 "failed_records":  0
+                                             },
+                                             {
+                                                 "name":  "valid_order_time",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.orders",
+                                                 "passed_records":  164571,
+                                                 "failed_records":  151
+                                             },
+                                             {
+                                                 "name":  "known_customer",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.orders",
+                                                 "passed_records":  164244,
+                                                 "failed_records":  478
+                                             },
+                                             {
+                                                 "name":  "amount_matches_quantity",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.orders",
+                                                 "passed_records":  164378,
+                                                 "failed_records":  344
+                                             },
+                                             {
+                                                 "name":  "positive_amount",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.orders",
+                                                 "passed_records":  164378,
+                                                 "failed_records":  344
+                                             }
+                                         ]
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_silver.payments",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  110,
+                        "warned_records":  0,
+                        "expectations":  [
+                                             {
+                                                 "name":  "valid_latency",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.payments",
+                                                 "passed_records":  114565,
+                                                 "failed_records":  0
+                                             },
+                                             {
+                                                 "name":  "payment_key",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.payments",
+                                                 "passed_records":  114565,
+                                                 "failed_records":  0
+                                             },
+                                             {
+                                                 "name":  "known_status",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.payments",
+                                                 "passed_records":  114455,
+                                                 "failed_records":  110
+                                             },
+                                             {
+                                                 "name":  "positive_payment",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.payments",
+                                                 "passed_records":  114565,
+                                                 "failed_records":  0
+                                             }
+                                         ]
+                    }
+    },
+    {
+        "update_id":  "0d04c163-8229-4fda-840a-4d7139b6236c",
+        "flow":  "rafa.dev_tariq_faisal1999_payments_silver.products",
+        "status":  "COMPLETED",
+        "quality":  {
+                        "dropped_records":  0,
+                        "warned_records":  0,
+                        "expectations":  [
+                                             {
+                                                 "name":  "positive_price",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.products",
+                                                 "passed_records":  200,
+                                                 "failed_records":  0
+                                             },
+                                             {
+                                                 "name":  "product_key",
+                                                 "dataset":  "rafa.dev_tariq_faisal1999_payments_silver.products",
+                                                 "passed_records":  200,
+                                                 "failed_records":  0
+                                             }
+                                         ]
+                    }
+    }
+]

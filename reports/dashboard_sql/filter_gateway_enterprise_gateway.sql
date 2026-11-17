@@ -1,0 +1,4 @@
+WITH dataset AS (SELECT `Date` AS `date`, `Hour` AS `hour`, `Region` AS `region`, `Channel` AS `channel`, `Gateway` AS `gateway`, `Tier` AS `tier`, `Customer ID` AS `customer_id`, `Customer Name` AS `customer_name`, `Affected Customer ID` AS `affected_customer_id`, `Downgraded` AS `downgraded`, MEASURE(`Revenue`) AS metric_revenue, MEASURE(`Lost Revenue`) AS metric_lost_revenue, MEASURE(`Orders`) AS metric_orders, MEASURE(`Failed Orders`) AS metric_failed_orders, MEASURE(`Payment Attempts`) AS metric_attempts, MEASURE(`Failed Attempts`) AS metric_failed_attempts
+FROM rafa.dev_tariq_faisal1999_payments_gold.payments_metrics
+WHERE `Affected Customer ID` IS NOT NULL
+GROUP BY ALL ORDER BY metric_lost_revenue DESC) SELECT `gateway` AS `gateway` FROM dataset GROUP BY ALL LIMIT 10000

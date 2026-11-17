@@ -1,0 +1,1052 @@
+{
+  "datasets": [
+    {
+      "name": "payments",
+      "displayName": "Payments",
+      "queryLines": [
+        "SELECT `Date` AS `date`, `Hour` AS `hour`, `Region` AS `region`, `Channel` AS `channel`, `Gateway` AS `gateway`, `Tier` AS `tier`, `Customer ID` AS `customer_id`, `Customer Name` AS `customer_name`, `Affected Customer ID` AS `affected_customer_id`, `Downgraded` AS `downgraded`, MEASURE(`Revenue`) AS metric_revenue, MEASURE(`Lost Revenue`) AS metric_lost_revenue, MEASURE(`Orders`) AS metric_orders, MEASURE(`Failed Orders`) AS metric_failed_orders, MEASURE(`Payment Attempts`) AS metric_attempts, MEASURE(`Failed Attempts`) AS metric_failed_attempts\nFROM payments_metrics\nGROUP BY ALL ORDER BY hour, gateway"
+      ],
+      "columns": [
+        {
+          "displayName": "Revenue",
+          "expression": "SUM(`metric_revenue`)"
+        },
+        {
+          "displayName": "Lost Revenue",
+          "expression": "SUM(`metric_lost_revenue`)"
+        },
+        {
+          "displayName": "Orders",
+          "expression": "SUM(`metric_orders`)"
+        },
+        {
+          "displayName": "Failed Orders",
+          "expression": "SUM(`metric_failed_orders`)"
+        },
+        {
+          "displayName": "Payment Attempts",
+          "expression": "SUM(`metric_attempts`)"
+        },
+        {
+          "displayName": "Failed Attempts",
+          "expression": "SUM(`metric_failed_attempts`)"
+        },
+        {
+          "displayName": "Payment Failure Rate",
+          "expression": "SUM(`metric_failed_attempts`) / NULLIF(SUM(`metric_attempts`),0)"
+        },
+        {
+          "displayName": "Affected Enterprise Customers",
+          "expression": "COUNT(DISTINCT `affected_customer_id`)"
+        }
+      ]
+    },
+    {
+      "name": "enterprise",
+      "displayName": "Enterprise",
+      "queryLines": [
+        "SELECT `Date` AS `date`, `Hour` AS `hour`, `Region` AS `region`, `Channel` AS `channel`, `Gateway` AS `gateway`, `Tier` AS `tier`, `Customer ID` AS `customer_id`, `Customer Name` AS `customer_name`, `Affected Customer ID` AS `affected_customer_id`, `Downgraded` AS `downgraded`, MEASURE(`Revenue`) AS metric_revenue, MEASURE(`Lost Revenue`) AS metric_lost_revenue, MEASURE(`Orders`) AS metric_orders, MEASURE(`Failed Orders`) AS metric_failed_orders, MEASURE(`Payment Attempts`) AS metric_attempts, MEASURE(`Failed Attempts`) AS metric_failed_attempts\nFROM payments_metrics\nWHERE `Affected Customer ID` IS NOT NULL\nGROUP BY ALL ORDER BY metric_lost_revenue DESC"
+      ],
+      "columns": [
+        {
+          "displayName": "Revenue",
+          "expression": "SUM(`metric_revenue`)"
+        },
+        {
+          "displayName": "Lost Revenue",
+          "expression": "SUM(`metric_lost_revenue`)"
+        },
+        {
+          "displayName": "Orders",
+          "expression": "SUM(`metric_orders`)"
+        },
+        {
+          "displayName": "Failed Orders",
+          "expression": "SUM(`metric_failed_orders`)"
+        },
+        {
+          "displayName": "Payment Attempts",
+          "expression": "SUM(`metric_attempts`)"
+        },
+        {
+          "displayName": "Failed Attempts",
+          "expression": "SUM(`metric_failed_attempts`)"
+        },
+        {
+          "displayName": "Payment Failure Rate",
+          "expression": "SUM(`metric_failed_attempts`) / NULLIF(SUM(`metric_attempts`),0)"
+        },
+        {
+          "displayName": "Affected Enterprise Customers",
+          "expression": "COUNT(DISTINCT `affected_customer_id`)"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "overview",
+      "displayName": "Payment outage",
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1",
+      "layout": [
+        {
+          "widget": {
+            "name": "title",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# Payments outage \u2014 revenue and customer impact"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "subtitle",
+            "multilineTextboxSpec": {
+              "lines": [
+                "October 10 \u00b7 10:00\u201314:00 UTC \u00b7 Gateway A | Baseline \u22482%, outage \u224860%, then recovery. All times are order time (UTC)."
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_date",
+            "queries": [
+              {
+                "name": "payments_date",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "date",
+                      "expression": "`date`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "enterprise_date",
+                "query": {
+                  "datasetName": "enterprise",
+                  "fields": [
+                    {
+                      "name": "date",
+                      "expression": "`date`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-date-range-picker",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "date",
+                    "displayName": "Date range",
+                    "queryName": "payments_date"
+                  },
+                  {
+                    "fieldName": "date",
+                    "displayName": "Date range",
+                    "queryName": "enterprise_date"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Date range",
+                "showTitle": true
+              },
+              "selection": {
+                "defaultSelection": {
+                  "range": {
+                    "dataType": "DATE",
+                    "min": {
+                      "value": "2026-10-09"
+                    },
+                    "max": {
+                      "value": "2026-10-11"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 4,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_region",
+            "queries": [
+              {
+                "name": "payments_region",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "enterprise_region",
+                "query": {
+                  "datasetName": "enterprise",
+                  "fields": [
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "region",
+                    "displayName": "Region",
+                    "queryName": "payments_region"
+                  },
+                  {
+                    "fieldName": "region",
+                    "displayName": "Region",
+                    "queryName": "enterprise_region"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Region",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 2,
+            "width": 4,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_gateway",
+            "queries": [
+              {
+                "name": "payments_gateway",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "gateway",
+                      "expression": "`gateway`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "enterprise_gateway",
+                "query": {
+                  "datasetName": "enterprise",
+                  "fields": [
+                    {
+                      "name": "gateway",
+                      "expression": "`gateway`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "gateway",
+                    "displayName": "Gateway",
+                    "queryName": "payments_gateway"
+                  },
+                  {
+                    "fieldName": "gateway",
+                    "displayName": "Gateway",
+                    "queryName": "enterprise_gateway"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Gateway",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 2,
+            "width": 4,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_0",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "measure(Revenue)",
+                      "expression": "MEASURE(`Revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(Revenue)",
+                  "displayName": "Net settlement revenue",
+                  "rowNumber": 0,
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "USD",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "frame": {
+                "title": "Net settlement revenue",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 4,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_1",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "measure(Lost Revenue)",
+                      "expression": "MEASURE(`Lost Revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(Lost Revenue)",
+                  "displayName": "Terminal failed order value",
+                  "rowNumber": 0,
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "USD",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "frame": {
+                "title": "Terminal failed order value",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 4,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_2",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "measure(Orders)",
+                      "expression": "MEASURE(`Orders`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(Orders)",
+                  "displayName": "Orders",
+                  "rowNumber": 0
+                }
+              },
+              "frame": {
+                "title": "Orders",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 4,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_3",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "measure(Failed Orders)",
+                      "expression": "MEASURE(`Failed Orders`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(Failed Orders)",
+                  "displayName": "Ultimately failed orders",
+                  "rowNumber": 0
+                }
+              },
+              "frame": {
+                "title": "Ultimately failed orders",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 7,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_4",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "measure(Payment Failure Rate)",
+                      "expression": "MEASURE(`Payment Failure Rate`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(Payment Failure Rate)",
+                  "displayName": "Payment attempt failure rate",
+                  "rowNumber": 0,
+                  "format": {
+                    "type": "number-percent",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "frame": {
+                "title": "Payment attempt failure rate",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 7,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_5",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "measure(Affected Enterprise Customers)",
+                      "expression": "MEASURE(`Affected Enterprise Customers`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "measure(Affected Enterprise Customers)",
+                  "displayName": "Affected enterprise customers",
+                  "rowNumber": 0
+                }
+              },
+              "frame": {
+                "title": "Affected enterprise customers",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 7,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "incident_heading",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Gateway incident and recovery"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 10,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "incident",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "hour",
+                      "expression": "`hour`"
+                    },
+                    {
+                      "name": "gateway",
+                      "expression": "`gateway`"
+                    },
+                    {
+                      "name": "failure_rate",
+                      "expression": "MEASURE(`Payment Failure Rate`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "ASC",
+                      "expression": "`hour`"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "hour",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "failure_rate",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "format": {
+                    "type": "number-percent",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                },
+                "color": {
+                  "fieldName": "gateway",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "GatewayA",
+                        "color": "#C83E3A"
+                      },
+                      {
+                        "value": "GatewayB",
+                        "color": "#2272B4"
+                      },
+                      {
+                        "value": "GatewayC",
+                        "color": "#178577"
+                      }
+                    ]
+                  }
+                }
+              },
+              "frame": {
+                "title": "Hourly failure rate by gateway \u2014 order time UTC",
+                "showTitle": true
+              },
+              "annotations": [
+                {
+                  "type": "vertical-line",
+                  "encodings": {
+                    "x": {
+                      "dataValue": "2026-10-10T10:00:00.000",
+                      "dataType": "DATETIME"
+                    },
+                    "label": {
+                      "value": "Gateway A outage"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 11,
+            "width": 12,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "lost_region",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    },
+                    {
+                      "name": "lost",
+                      "expression": "MEASURE(`Lost Revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "region",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "lost",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "USD",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "frame": {
+                "title": "Lost revenue by region",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 17,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "lost_tier",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "tier",
+                      "expression": "`tier`"
+                    },
+                    {
+                      "name": "lost",
+                      "expression": "MEASURE(`Lost Revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "tier",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "lost",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "format": {
+                    "type": "number-currency",
+                    "currencyCode": "USD",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                }
+              },
+              "frame": {
+                "title": "Lost revenue by tier at order time",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 17,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "recovery",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "payments",
+                  "fields": [
+                    {
+                      "name": "date",
+                      "expression": "`date`"
+                    },
+                    {
+                      "name": "gateway",
+                      "expression": "`gateway`"
+                    },
+                    {
+                      "name": "failure_rate",
+                      "expression": "MEASURE(`Payment Failure Rate`)"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "ASC",
+                      "expression": "`date`"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "date",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "failure_rate",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "format": {
+                    "type": "number-percent",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  }
+                },
+                "color": {
+                  "fieldName": "gateway",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "GatewayA",
+                        "color": "#C83E3A"
+                      },
+                      {
+                        "value": "GatewayB",
+                        "color": "#2272B4"
+                      },
+                      {
+                        "value": "GatewayC",
+                        "color": "#178577"
+                      }
+                    ]
+                  }
+                }
+              },
+              "frame": {
+                "title": "Daily failure-rate recovery by gateway",
+                "showTitle": true
+              },
+              "annotations": [
+                {
+                  "type": "vertical-line",
+                  "encodings": {
+                    "x": {
+                      "dataValue": "2026-10-10T10:00:00.000",
+                      "dataType": "DATETIME"
+                    },
+                    "label": {
+                      "value": "Gateway A outage"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 22,
+            "width": 12,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "top_customers",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "enterprise",
+                  "fields": [
+                    {
+                      "name": "customer_id",
+                      "expression": "`customer_id`"
+                    },
+                    {
+                      "name": "customer_name",
+                      "expression": "`customer_name`"
+                    },
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    },
+                    {
+                      "name": "lost",
+                      "expression": "MEASURE(`Lost Revenue`)"
+                    },
+                    {
+                      "name": "failed",
+                      "expression": "MEASURE(`Failed Orders`)"
+                    },
+                    {
+                      "name": "downgraded",
+                      "expression": "`downgraded`"
+                    }
+                  ],
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "DESC",
+                      "expression": "MEASURE(`Lost Revenue`)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "customer_id",
+                    "displayName": "Customer Id"
+                  },
+                  {
+                    "fieldName": "customer_name",
+                    "displayName": "Customer Name"
+                  },
+                  {
+                    "fieldName": "region",
+                    "displayName": "Region"
+                  },
+                  {
+                    "fieldName": "lost",
+                    "displayName": "Lost",
+                    "format": {
+                      "type": "number-currency",
+                      "currencyCode": "USD",
+                      "abbreviation": "compact",
+                      "decimalPlaces": {
+                        "type": "max",
+                        "places": 2
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "failed",
+                    "displayName": "Failed"
+                  },
+                  {
+                    "fieldName": "downgraded",
+                    "displayName": "Downgraded"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Top impacted enterprise customers \u2014 outage failures",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 27,
+            "width": 12,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "definitions",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Revenue = captures minus refunds; lost revenue = terminal failed orders (not causal incremental loss). Unknown outcomes are excluded from revenue/loss. Filter dates to Oct 10 for the incident; 5 affected enterprise customers downgraded afterward."
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 34,
+            "width": 12,
+            "height": 1
+          }
+        }
+      ]
+    }
+  ]
+}

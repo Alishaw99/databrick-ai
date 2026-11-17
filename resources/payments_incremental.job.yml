@@ -1,0 +1,22 @@
+resources:
+  jobs:
+    payments_incremental:
+      name: payments_incremental
+      max_concurrent_runs: 1
+      timeout_seconds: 3600
+      performance_target: STANDARD
+      queue:
+        enabled: true
+      email_notifications:
+        on_failure:
+          - ${var.alert_email}
+      tags:
+        project: payments_lakehouse
+        aidevkit_project: ai-dev-kit
+      tasks:
+        - task_key: update_pipeline
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.payments.id}
+            full_refresh: false
+          timeout_seconds: 3500
+          max_retries: 0

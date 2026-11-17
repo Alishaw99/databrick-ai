@@ -1,0 +1,29 @@
+resources:
+  pipelines:
+    payments:
+      name: payments_lakehouse
+      catalog: ${var.catalog}
+      schema: ${resources.schemas.gold.name}
+      serverless: true
+      continuous: false
+      photon: true
+      channel: CURRENT
+      edition: ADVANCED
+      libraries:
+        - glob:
+            include: ../src/pipelines/**
+      parameters:
+        catalog: ${var.catalog}
+        bronze_schema: ${resources.schemas.bronze.name}
+        silver_schema: ${resources.schemas.silver.name}
+        gold_schema: ${resources.schemas.gold.name}
+        bronze: ${var.catalog}.${resources.schemas.bronze.name}
+        silver: ${var.catalog}.${resources.schemas.silver.name}
+        gold: ${var.catalog}.${resources.schemas.gold.name}
+        source_root: /Volumes/${var.catalog}/${resources.schemas.landing_schema.name}/raw_data/sources
+        max_order_loss_rate: "0.01"
+        incident_start: "2026-10-10 10:00:00"
+        incident_end: "2026-10-10 14:00:00"
+        incident_gateway: GatewayA
+      configuration:
+        spark.sql.session.timeZone: UTC
